@@ -8,7 +8,8 @@ import io.cucumber.testng.CucumberOptions;
          glue = {"com.proCare.automation.stepdefinitions"},
          plugin = { "pretty", "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"},
          monochrome = false,
-         dryRun = false
+         dryRun = false,
+         publish=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	

@@ -54,6 +54,10 @@ public class WebUtils {
 		LOGGER.info(LOG_DESIGN + "Refreshing the browser...");
 		driver.navigate().refresh();
 	}
+	public void elementWaitUntilDisplayed(WebElement ele) {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOf(ele));
+	}
 
 	/**
 	 * It will switch to the frame element.
@@ -375,6 +379,16 @@ public class WebUtils {
 		WebDriverWait wait = new WebDriverWait(driver, Long.valueOf(Config.getProperty("minTimeOut")));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(getByObject(locator)));
 	}
+	/**
+	 * It will check that an element is present on the DOM of a page and visible.
+	 * 
+	 * @param By ele
+	 */
+	public void waitForElementVisibilityWithMinTimeOut(By ele) {
+		LOGGER.info(LOG_DESIGN + "waiting for visibility of element [{}] for minTimeout", ele);
+		WebDriverWait wait = new WebDriverWait(driver, Long.valueOf(Config.getProperty("minTimeOut")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ele));
+	}
 
 	/**
 	 * It will check that an element is present on the DOM of a page and visible.
@@ -451,7 +465,6 @@ public class WebUtils {
 		highlightWebElement(element);
 		String elementText = element.getText();
 		LOGGER.info(LOG_DESIGN + "Text found for : [{}] is : [{}]", element, elementText);
-
 		return elementText;
 
 	}
@@ -657,7 +670,6 @@ public class WebUtils {
 	/**
 	 * It will click on element without waiting for it to be clickable using Actions
 	 * class.
-	 * 
 	 * @param element WebElement
 	 */
 	public void actionPress(WebElement element) {
