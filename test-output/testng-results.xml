@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-09T00:58:08 IST" name="Default suite" finished-at="2023-10-09T00:59:30 IST" duration-ms="82726">
+  <suite started-at="2023-10-10T22:33:32 IST" name="Default suite" finished-at="2023-10-10T22:35:02 IST" duration-ms="89765">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@17503f6b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-10-09T00:58:08 IST" name="Default test" finished-at="2023-10-09T00:59:30 IST" duration-ms="82726">
+    <test started-at="2023-10-10T22:33:32 IST" name="Default test" finished-at="2023-10-10T22:35:02 IST" duration-ms="89765">
       <class name="com.proCare.automation.testrunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.proCare.automation.testrunner.TestRunner@17503f6b]" started-at="2023-10-09T00:58:08 IST" name="setUpClass" finished-at="2023-10-09T00:58:09 IST" duration-ms="833" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:33:32 IST" name="setUpClass" finished-at="2023-10-10T22:33:33 IST" duration-ms="731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@17503f6b]" started-at="2023-10-09T00:58:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-09T00:58:37 IST" duration-ms="28150" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:33:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-10T22:33:51 IST" duration-ms="18581" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@17503f6b]" started-at="2023-10-09T00:58:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-09T00:59:00 IST" duration-ms="22963" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:33:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-10T22:34:04 IST" duration-ms="12428" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@17503f6b]" started-at="2023-10-09T00:59:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-09T00:59:15 IST" duration-ms="14995" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:34:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-10T22:34:16 IST" duration-ms="12441" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -62,7 +62,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@17503f6b]" started-at="2023-10-09T00:59:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-09T00:59:28 IST" duration-ms="13092" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:34:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-10T22:34:27 IST" duration-ms="10512" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,7 +78,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.proCare.automation.testrunner.TestRunner@17503f6b]" started-at="2023-10-09T00:59:28 IST" name="tearDownClass" finished-at="2023-10-09T00:59:30 IST" duration-ms="2625" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:34:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-10T22:34:37 IST" duration-ms="10672" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate E-Mail Address and Password text fields in the Login page have the place holder text"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Login Page]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:34:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-10T22:34:49 IST" duration-ms="11207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Forgot password link is displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Login Page]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:34:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-10-10T22:35:00 IST" duration-ms="11112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Remember Me checkbox toggle functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Verify Login Page]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.proCare.automation.testrunner.TestRunner@20bd8be5]" started-at="2023-10-10T22:35:00 IST" name="tearDownClass" finished-at="2023-10-10T22:35:02 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

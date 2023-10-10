@@ -32,6 +32,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.proCare.utils.common.Config;
+
 /**
  * This class is responsible for performing all required user actions to
  * automate a web application. It is generally made for web applications that
@@ -54,6 +55,7 @@ public class WebUtils {
 		LOGGER.info(LOG_DESIGN + "Refreshing the browser...");
 		driver.navigate().refresh();
 	}
+
 	public void elementWaitUntilDisplayed(WebElement ele) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(ele));
@@ -112,7 +114,6 @@ public class WebUtils {
 			}
 		}
 	}
-
 
 	/**
 	 * It will close the next tab opened other then original tab.
@@ -304,7 +305,7 @@ public class WebUtils {
 	 */
 	public void waitForElementPresence(String locator, long seconds) {
 		LOGGER.info(LOG_DESIGN + "waiting for presence of element [{}] for {} seconds", locator, seconds);
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
 		wait.until(ExpectedConditions.presenceOfElementLocated(getByObject(locator)));
 	}
@@ -331,7 +332,7 @@ public class WebUtils {
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(getByObject(locator)));
 	}
-	
+
 	/**
 	 * It will check that an element is present on the DOM of a page and visible.
 	 * 
@@ -343,7 +344,7 @@ public class WebUtils {
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	/**
 	 * It will check that an element is present on the DOM of a page and visible.
 	 * 
@@ -351,7 +352,8 @@ public class WebUtils {
 	 * @param seconds
 	 */
 	public void waitForElementVisibility(WebElement element) {
-		LOGGER.info(LOG_DESIGN + "waiting for visibility of element [{}] for {} seconds", element, Config.getProperty("VISIBILITY_TIMEOUT"));
+		LOGGER.info(LOG_DESIGN + "waiting for visibility of element [{}] for {} seconds", element,
+				Config.getProperty("VISIBILITY_TIMEOUT"));
 		WebDriverWait wait = new WebDriverWait(driver, Integer.valueOf(Config.getProperty("VISIBILITY_TIMEOUT")));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
@@ -379,6 +381,7 @@ public class WebUtils {
 		WebDriverWait wait = new WebDriverWait(driver, Long.valueOf(Config.getProperty("minTimeOut")));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(getByObject(locator)));
 	}
+
 	/**
 	 * It will check that an element is present on the DOM of a page and visible.
 	 * 
@@ -670,6 +673,7 @@ public class WebUtils {
 	/**
 	 * It will click on element without waiting for it to be clickable using Actions
 	 * class.
+	 * 
 	 * @param element WebElement
 	 */
 	public void actionPress(WebElement element) {
@@ -780,7 +784,6 @@ public class WebUtils {
 		((JavascriptExecutor) driver).executeScript(mouseOverScript, elementToHover);
 	}
 
-
 	/**
 	 * It will return the text of only parent element excluding the text present in
 	 * child elements. e.g : Sometimes we have to get the text content of a parent
@@ -841,7 +844,6 @@ public class WebUtils {
 		this.click(OptionToSelect);
 	}
 
-
 	/**
 	 * It will get selected value from dropdown
 	 * 
@@ -853,7 +855,6 @@ public class WebUtils {
 		LOGGER.info(LOG_DESIGN + "Selected value from dropdown [{}] , is [{}]", element, selectedValueFromDropdown);
 		return selectedValueFromDropdown;
 	}
-
 
 	/**
 	 * It will re attempt the click if StaleElementReferenceException exception
@@ -878,29 +879,35 @@ public class WebUtils {
 		return result;
 	}
 
-	
-	 /** It will perform drag drop operation using Action class.
-     * @param driver
-     * @param sourceElement
-     * @param targetElement
-     */
-    public void dragDropUsingActions(WebDriver driver, WebElement sourceElement, WebElement targetElement) {
-    	highlightWebElement(sourceElement);
+	/**
+	 * It will perform drag drop operation using Action class.
+	 * 
+	 * @param driver
+	 * @param sourceElement
+	 * @param targetElement
+	 */
+	public void dragDropUsingActions(WebDriver driver, WebElement sourceElement, WebElement targetElement) {
+		highlightWebElement(sourceElement);
 		highlightWebElement(targetElement);
-    	(new Actions(driver)).dragAndDrop(sourceElement, targetElement).perform();
-    }
-    
-    /** It will drag and drop the element by first holding the source element for the given time and then will drag to target element.
-     * @param driver
-     * @param sourceElement
-     * @param targetElement
-     * @param timeToHoldInSeconds
-     */
-    public void dragDropUsingClickAndHold(WebDriver driver, WebElement sourceElement, WebElement targetElement, long timeToHoldInSeconds) {
-    	highlightWebElement(sourceElement);
+		(new Actions(driver)).dragAndDrop(sourceElement, targetElement).perform();
+	}
+
+	/**
+	 * It will drag and drop the element by first holding the source element for the
+	 * given time and then will drag to target element.
+	 * 
+	 * @param driver
+	 * @param sourceElement
+	 * @param targetElement
+	 * @param timeToHoldInSeconds
+	 */
+	public void dragDropUsingClickAndHold(WebDriver driver, WebElement sourceElement, WebElement targetElement,
+			long timeToHoldInSeconds) {
+		highlightWebElement(sourceElement);
 		highlightWebElement(targetElement);
-    	Actions actions = new Actions(driver);
-		actions.clickAndHold(sourceElement).pause(Duration.ofSeconds(timeToHoldInSeconds)).moveToElement(targetElement).release().build().perform();
-    }
+		Actions actions = new Actions(driver);
+		actions.clickAndHold(sourceElement).pause(Duration.ofSeconds(timeToHoldInSeconds)).moveToElement(targetElement)
+				.release().build().perform();
+	}
 
 }
