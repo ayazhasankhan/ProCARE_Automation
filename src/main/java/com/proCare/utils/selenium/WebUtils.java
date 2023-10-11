@@ -436,6 +436,23 @@ public class WebUtils {
 	}
 
 	/**
+	 * It will action MoveTo on a given locator.
+	 * 
+	 * @param locator
+	 */
+	public void actionMoveTo(WebElement element) {
+		try {
+			Actions action = new Actions(driver);
+			LOGGER.info(LOG_DESIGN + "Clicking on : [{}]", element);
+			waitForElementVisibility(element);
+			highlightWebElement(element);
+			action.moveToElement(element).build().perform();
+		} catch (Exception e) {
+			LOGGER.error(LOG_DESIGN + "Exception occurred while clicking : [{}]", e.getMessage());
+		}
+	}
+
+	/**
 	 * It will navigate to the specified URL.
 	 * 
 	 * @param URL
@@ -465,6 +482,7 @@ public class WebUtils {
 	 * @return element's text value
 	 */
 	public String getText(WebElement element) {
+		waitForElementVisibility(element);
 		highlightWebElement(element);
 		String elementText = element.getText();
 		LOGGER.info(LOG_DESIGN + "Text found for : [{}] is : [{}]", element, elementText);
@@ -656,6 +674,35 @@ public class WebUtils {
 	}
 
 	/**
+	 * It will double click on element using Actions class.
+	 * 
+	 * @param element
+	 * @param seconds
+	 */
+	public void actionDoubleClick(WebElement element, long seconds) {
+		waitForElementVisibility(element);
+		highlightWebElement(element);
+		LOGGER.info(LOG_DESIGN + "Clicking on WebElement using Actions class, element : [{}]", element);
+		WebDriverWait driverWait = new WebDriverWait(driver, seconds);
+		driverWait.until(ExpectedConditions.elementToBeClickable(element));
+		Actions actions = new Actions(driver);
+		actions.doubleClick(element).perform();
+	}
+	/**
+	 * It will double click on element using Actions class.
+	 * 
+	 * @param element
+	 * @param seconds
+	 * @throws InterruptedException 
+	 */
+	public void performDoubleClick(WebElement element) {
+		waitForElementVisibility(element);
+		highlightWebElement(element);
+		LOGGER.info(LOG_DESIGN + "Clicking on WebElement using Actions class, element : [{}]", element);
+		((JavascriptExecutor)driver).executeScript("arguments[0].doubleClick();", element);
+	}
+
+	/**
 	 * It will click on element using Actions class.
 	 * 
 	 * @param element WebElement
@@ -768,6 +815,7 @@ public class WebUtils {
 	 */
 	public void mouseHover(WebElement elementToHover) {
 		LOGGER.info(LOG_DESIGN + "Mouse hovering on element , element : [{}]", elementToHover);
+		waitForElementVisibility(elementToHover);
 		Actions hover = new Actions(driver);
 		hover.moveToElement(elementToHover);
 		hover.build();

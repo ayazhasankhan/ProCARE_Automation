@@ -50,11 +50,11 @@ public class LoginPage {
 	}
 
 	public void login() {
-		String password = System.getenv("EVRA_PASSWORD") != null ? System.getenv("EVRA_PASSWORD")
-				: Config.getProperty("EVRA_PASSWORD");
-		webUtils.enterText(emailInputBox, Config.getProperty("EVRA_EMAIL"));
-		webUtils.enterText(passwordInputBox, password);
-		webUtils.click(signInButton);
+		String username = Config.getProperty("Username");
+		String password = Config.getProperty("Password");
+		this.enterUsername(username);
+		this.enterPassword(password);
+		this.clickSignnInButton();
 	}
 
 	public void enterUsername(String username) {

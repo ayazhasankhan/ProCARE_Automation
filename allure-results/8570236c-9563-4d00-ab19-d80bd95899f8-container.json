@@ -1,0 +1,1 @@
+{"uuid":"8570236c-9563-4d00-ab19-d80bd95899f8","name":"Scenario: Validate logging into the Application using invalid credentials (i.e. Invalid email address and Invalid Password)","children":["4b1f99be-a243-4096-9f12-1b26ee409008"],"befores":[],"afters":[],"start":1697015137513,"stop":1697015137524}

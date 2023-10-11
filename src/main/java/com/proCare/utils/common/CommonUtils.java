@@ -67,4 +67,11 @@ public class CommonUtils {
 		
 		return lines;
 	}
+	/**
+	 * @throws InterruptedException 
+	 * 
+	 */
+	public void hardWaitFor(int sec) throws InterruptedException {
+		Thread.sleep(sec);
+	}
 }
