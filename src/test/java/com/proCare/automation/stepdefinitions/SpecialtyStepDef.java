@@ -30,7 +30,7 @@ public class SpecialtyStepDef {
 	}
 
 	@When("User able to see home page")
-	public void user_able_to_see_home_page() {
+	public void user_able_to_see_home_page() throws Exception {
 		Assert.assertEquals(homePage.isHomeGroupPageHeading(), true);
 	}
 
@@ -90,7 +90,7 @@ public class SpecialtyStepDef {
 	}
 
 	@Then("User able to select row for newly created speciality")
-	public void user_able_to_select_row_for_newly_created_speciality() {
+	public void user_able_to_select_row_for_newly_created_speciality() throws Exception {
 		specialityPage.selectCreatedRow();
 	}
 

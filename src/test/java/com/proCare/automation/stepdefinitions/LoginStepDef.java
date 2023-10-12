@@ -43,7 +43,7 @@ public class LoginStepDef {
 	}
 
 	@Then("User should land on home page successfully")
-	public void user_should_land_on_home_page_successfully() {
+	public void user_should_land_on_home_page_successfully() throws Exception {
 		Assert.assertEquals(homePage.isHomeGroupPageHeading(), true);
 	}
 

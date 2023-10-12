@@ -225,27 +225,29 @@ public class SpecialityPage {
 	}
 
 	public String getCreatedSpecialityName() throws InterruptedException {
-		common.hardWaitFor(3500);
+		common.hardWaitFor(4500);
 		return webUtils.getText(Ele_SpecialityName_Text);
 	}
 	public String getUpdatedSpecialityName() throws InterruptedException {
-		common.hardWaitFor(3500);
+		common.hardWaitFor(2500);
 		return webUtils.getText(Ele_SpecialityName_Text);
 	}
 
-	public void selectCreatedRow() {
+	public void selectCreatedRow() throws Exception {
+		common.hardWaitFor(1500);
 		webUtils.click(Ele_First_Row);
 	}
 
 	public void performMouseHoverThreeDotMenu() throws InterruptedException {
 		webUtils.isElementDisplayed(Ele_HeaderSave_Button);
-		common.hardWaitFor(1500);
+		common.hardWaitFor(2500);
 		webUtils.click(Ele_ThreeDot_Menu);
 	}
 
 	public boolean verifyDeleteSelectedRowsButtonDisplayed() throws InterruptedException {
 		boolean flag = false;
 		try {
+			common.hardWaitFor(1200);
 			webUtils.isElementDisplayed(Ele_DeleteSelectedRows_Button);
 			flag = true;
 		} catch (Exception e) {
@@ -256,7 +258,7 @@ public class SpecialityPage {
 	}
 
 	public void clickOnSelectedRowsButton() throws InterruptedException {
-		common.hardWaitFor(1200);
+		common.hardWaitFor(2200);
 		webUtils.jsClick(Ele_DeleteSelectedRows_Button);
 		common.hardWaitFor(1200);
 	}
